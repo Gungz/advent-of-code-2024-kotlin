@@ -34,10 +34,7 @@ fun main() {
     val diffTotal = differ.sum()
     diffTotal.println()
 
-    // Read the input from the `src/day01_sample.txt` file.
-    //val input = readInput("day01_sample")
-    //part1(input).println()
-    //part2(input).println()
+    // Part 2
     val occurrence = leftList.map { el -> rightList.count{it == el} }
     val similarities = leftList.zip(occurrence).map { (el1, el2) -> el1 * el2 }
     val simTotal = similarities.sum()
